@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COP-Fluent-API", "COP-Fluent-API\COP-Fluent-API.csproj", "{92D82E60-626A-4D90-931C-358939B85988}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92D82E60-626A-4D90-931C-358939B85988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D82E60-626A-4D90-931C-358939B85988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D82E60-626A-4D90-931C-358939B85988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D82E60-626A-4D90-931C-358939B85988}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE5EA484-892A-4B82-B8A7-0CE51984C481}
+	EndGlobalSection
+EndGlobal
