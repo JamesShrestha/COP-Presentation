@@ -7,8 +7,6 @@ var simpleQuery = SimpleQueryBuilder.Create()
     .From("Test_Table t")
     .Join("Test_Table2 t2", "t.id = t2.id")
     .Where("t.name = 'Test'")
-    .AndWhere("t2.test = 'Test'")
-    .OrWhere("t.type = 'Test'")
     .OrderBy("Test")
     .Build();
 
@@ -51,18 +49,6 @@ public class SimpleQueryBuilder : ICanSelect, ICanFrom, ICanJoin, ICanOrderBy, I
         return this;
     }
 
-    public ICanOrderBy AndWhere(string condition)
-    {
-        this._query.Append($"AND ");
-        return Where(condition);
-    }
-
-    public ICanOrderBy OrWhere(string condition)
-    {
-        this._query.Append($"OR ");
-        return Where(condition);
-    }
-
     public ICanBuild OrderBy(params string[] columns)
     {
         this._query.Append($"ORDER BY {String.Join(" ", columns)} ");
@@ -80,7 +66,7 @@ public interface ICanSelect
     ICanFrom Select(params string[] columns);
 }
 
-public interface ICanFrom { 
+public interface ICanFrom{ 
     ICanJoin From (params string[] tables);
 }
 
@@ -92,8 +78,6 @@ public interface ICanJoin : ICanBuild
 
 public interface ICanOrderBy : ICanBuild
 {
-    ICanOrderBy AndWhere(string condition);
-    ICanOrderBy OrWhere(string condition);
     ICanBuild OrderBy(params string[] columns);
 }
 

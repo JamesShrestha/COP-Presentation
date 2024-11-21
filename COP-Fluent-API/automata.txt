@@ -1,0 +1,19 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	node [shape = doublecircle]; "Build()";
+	node [shape = circle];
+    start [shape=point];
+    start -> "Create()"; 	
+	"Create()" -> "Select()"
+    "Select()" -> "From()"
+    "From()" -> "Build()"
+    "From()" -> "Where()"
+    "From()" -> "Join()"
+    "From()" -> "OrderBy()"
+    "Join()" -> "Where()"
+    "Where()" -> "Build()"
+    "Where()" -> "OrderBy()"
+    "Join()" -> "Build()"
+    "Join()" -> "Join()"
+    "OrderBy()" -> "Build()"
+}
